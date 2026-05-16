@@ -2,6 +2,11 @@ node_modules/
 .next/
 .env.local
 .env
+.env.*
 *.env
 affiliate-site/.next/
 affiliate-site/node_modules/
+dist/
+build/
+*.log
+.DS_Store
