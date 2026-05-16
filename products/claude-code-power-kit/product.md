@@ -174,6 +174,133 @@ Testing framework and any existing test setup: [DESCRIBE YOUR TEST SETUP]
 
 ---
 
+### PR-06: Dependency Audit
+
+```
+Audit the dependencies in the following [PACKAGE FILE, e.g., package.json / requirements.txt / pom.xml] for security vulnerabilities, outdated versions, and bloat.
+
+Package file contents:
+
+[PASTE PACKAGE FILE HERE]
+
+Language/ecosystem: [e.g., Node.js / Python / Java]
+
+Perform three audits:
+
+## 1. Security Vulnerabilities
+For each dependency with a known CVE:
+| Package | Current Version | CVE | Severity | Fixed In | Action |
+|---------|----------------|-----|----------|----------|--------|
+
+## 2. Outdated Packages
+For each package more than one major version behind:
+| Package | Current | Latest Stable | Breaking Changes Summary | Upgrade Risk |
+|---------|---------|--------------|--------------------------|-------------|
+
+## 3. Bloat Analysis
+- Packages that duplicate functionality (e.g., two HTTP clients, two date libraries)
+- Packages that could be replaced with native language features
+- Dev dependencies accidentally in production
+- Packages with very large install size relative to their utility
+
+## Recommended Actions (Prioritized)
+1. [Critical security updates — do immediately]
+2. [High-value upgrades — do this sprint]
+3. [Nice-to-have cleanups — do when touching these files]
+
+## Updated Package File
+[The cleaned-up package file with security patches and obvious removals applied]
+```
+
+---
+
+### PR-07: Accessibility Audit
+
+```
+Audit the following [HTML / JSX / template] code for accessibility issues against WCAG 2.1 Level AA compliance.
+
+Code:
+
+[PASTE CODE HERE]
+
+Component type: [e.g., "form", "navigation menu", "data table", "modal dialog"]
+
+Check for:
+
+## Perceivable
+- Images missing alt text or with non-descriptive alt text
+- Color contrast ratios below 4.5:1 (text) or 3:1 (large text/UI)
+- Content that relies on color alone to convey meaning
+- Missing captions or transcripts for media
+
+## Operable
+- Interactive elements not reachable by keyboard
+- Missing or incorrect focus management (modals, dropdowns)
+- Focus indicators not visible
+- Timeout/motion that cannot be paused or disabled
+- Missing skip navigation links
+
+## Understandable
+- Form fields without labels (or with labels not programmatically associated)
+- Error messages that don't identify the field or explain how to fix
+- Inconsistent navigation patterns
+
+## Robust
+- Missing or incorrect ARIA roles, states, and properties
+- ARIA labels that override visible text
+- Custom components that don't follow ARIA Authoring Practices
+
+For each issue:
+| Element | Line | WCAG Criterion | Issue | Fix (with code) |
+|---------|------|---------------|-------|-----------------|
+
+## Fixed Code
+[The complete corrected component]
+
+## Screen Reader Announcement
+[What a screen reader would say when interacting with the fixed component]
+```
+
+---
+
+### PR-08: Code Complexity Reducer
+
+```
+Analyze the following [LANGUAGE] code for cognitive complexity and reduce it to the simplest correct form. I am targeting a maximum cyclomatic complexity of [TARGET, e.g., 5] per function.
+
+Code:
+
+[PASTE CODE HERE]
+
+First, calculate the current complexity:
+
+## Complexity Report
+| Function | Cyclomatic Complexity | Cognitive Complexity | Decision Points |
+|----------|-----------------------|---------------------|-----------------|
+
+For each function exceeding the target:
+
+## Simplification Plan for [Function Name]
+**Current complexity:** [number]
+**Decision points causing complexity:** [list each if/else/switch/loop/try/catch]
+
+Simplification strategies to apply (use only what fits):
+- Early returns to eliminate nesting
+- Guard clauses to replace nested ifs
+- Extract condition into named boolean variable
+- Replace switch with lookup table or polymorphism
+- Decompose into smaller functions
+
+**Simplified version:**
+[Code]
+
+**New complexity:** [number]
+
+Deliver the fully simplified file at the end, followed by a before/after complexity comparison table.
+```
+
+---
+
 ## Section 2: Documentation
 
 ### DOC-01: README Generator
@@ -377,6 +504,139 @@ Rules:
 
 ---
 
+### DOC-06: Runbook Writer
+
+```
+Write a production runbook for the following service or operation. This document will be used by on-call engineers at 3am who may not be familiar with this system.
+
+Service/Operation: [e.g., "User Authentication Service" or "Weekly database backup job"]
+Tech stack: [LANGUAGE, FRAMEWORK, DATABASE, CLOUD PROVIDER]
+Owner team: [TEAM NAME]
+On-call contact: [NAME/CHANNEL]
+
+Write the runbook with:
+
+## Service Overview
+[What this service does, why it matters, what breaks if it goes down — 1 paragraph]
+
+## Architecture Diagram
+[ASCII diagram showing the service and its dependencies]
+
+## Health Checks
+[For each: what to check, expected healthy state, command to run, what to do if unhealthy]
+```
+# Is it running?
+[HEALTH CHECK COMMAND]
+# Expected output:
+[EXPECTED OUTPUT]
+```
+
+## Common Alerts & Runbooks
+For each alert this service can fire:
+### Alert: [ALERT NAME]
+**Meaning:** [Plain English — what is happening]
+**Severity:** [P1/P2/P3]
+**First action:** [Exact command to run first]
+**Decision tree:** [If X then Y, else Z]
+**Escalate if:** [When to wake up the next person]
+
+## Deployment
+[Step-by-step deploy procedure, including rollback]
+
+## Useful Commands
+[Cheatsheet of the 10 most-used commands for this service]
+
+## Known Issues & Quirks
+[Things that look scary but are normal, or things that are actually broken but we live with]
+```
+
+---
+
+### DOC-07: Onboarding Guide
+
+```
+Write a developer onboarding guide for a new engineer joining the team who will work on [PROJECT/SYSTEM NAME].
+
+About the new engineer: [e.g., "Senior frontend developer, strong in React, new to our Python backend"]
+Expected ramp time: [e.g., "First PR in week 1, full autonomy by week 4"]
+
+Project context:
+- What it does: [DESCRIPTION]
+- Tech stack: [LIST]
+- Team size: [NUMBER]
+- Main repositories: [LIST]
+
+Write a structured guide:
+
+## Day 1: Setup
+[Exact step-by-step: accounts to create, tools to install, repos to clone, configs to set up. Include every command. Assume nothing is pre-installed.]
+
+## Day 1: First Run
+[How to run the project locally with verification steps — "you'll know it works when you see X"]
+
+## Week 1: Code Orientation
+[The 10 most important files/directories to read, in order, with a one-sentence explanation of each]
+
+## Week 1: First Contribution
+[Recommended first task type, how to pick up a ticket, the contribution workflow from branch to merged PR]
+
+## Architecture Mental Model
+[The "aha moment" explanation of how the system fits together — the explanation that experienced engineers wish someone had given them on day one]
+
+## Team Conventions
+[Code style, PR process, meeting schedule, how decisions are made, how to ask for help]
+
+## Glossary
+[Project-specific terms, acronyms, and internal jargon a newcomer will encounter]
+
+## 30/60/90 Day Goals
+[What success looks like at each milestone]
+```
+
+---
+
+### DOC-08: Error Message Writer
+
+```
+Rewrite the following error messages to be clear, actionable, and user-friendly. Apply the principles of good error message design.
+
+Current error messages to improve:
+
+[PASTE YOUR ERROR MESSAGES, one per line or as a list]
+
+Context:
+- Who sees these errors: [End users / Developers / Both]
+- Where they appear: [UI toast / API response / Log file / CLI output]
+- Product name: [YOUR PRODUCT NAME]
+
+For each error message, apply these principles:
+1. WHAT happened (not just an error code)
+2. WHY it happened (the cause, in plain language)
+3. WHAT TO DO next (specific action the user can take)
+4. AVOID: "An error occurred", blame language, technical jargon for end users, vague "try again later"
+
+Output format for each:
+
+### Original
+`[original error]`
+
+### Problems
+[What's wrong with the original]
+
+### Rewritten (User-Facing)
+`[Clear, friendly version for end users]`
+
+### Rewritten (Developer/Log)
+`[Technical version with error codes, stack context, correlation IDs for logs/APIs]`
+
+### Notes
+[Any edge case handling or localization considerations]
+
+After all rewrites, provide a one-page Error Message Style Guide summarizing the patterns used.
+```
+
+---
+
 ## Section 3: Debugging
 
 ### DBG-01: Error Explainer
@@ -523,6 +783,147 @@ Analyze for:
 
 ---
 
+### DBG-05: Log Analyzer
+
+```
+Analyze the following application logs and identify every anomaly, error pattern, and performance issue. I need a structured diagnosis, not just a list of errors.
+
+Logs:
+
+[PASTE LOG OUTPUT HERE]
+
+Application type: [e.g., "Node.js REST API", "Python data pipeline", "Java microservice"]
+Time window: [e.g., "Last 1 hour during an incident"]
+Known context: [e.g., "Users reporting slow checkout", "Deployment happened at 14:32"]
+
+## Error Pattern Analysis
+[Group similar errors together. For each group:]
+- Error signature: [The common pattern]
+- First occurrence: [Timestamp]
+- Frequency: [How often / accelerating?]
+- Probable cause: [Root cause hypothesis]
+- Lines to verify: [Specific log lines that support or refute this hypothesis]
+
+## Timeline Reconstruction
+[Ordered sequence of events that tells the story of what happened]
+
+## Performance Anomalies
+[Response times, queue depths, memory usage spikes — flag anything that deviates from normal patterns]
+
+## Correlation Analysis
+[What events correlate with the errors? Deployments, traffic spikes, cron jobs, upstream changes]
+
+## Immediate Actions
+[What to do right now to stop the bleeding]
+
+## Investigation Next Steps
+[What additional logs, metrics, or traces to pull to confirm the root cause]
+
+## Recommended Log Improvements
+[What structured logging fields should be added to make future debugging faster]
+```
+
+---
+
+### DBG-06: Memory Leak Hunter
+
+```
+Help me find and fix a memory leak in the following [LANGUAGE] application.
+
+Symptoms: [e.g., "Memory grows from 200MB to 2GB over 6 hours, then OOM crash"]
+Runtime: [e.g., "Node.js 20, running as a long-lived server process"]
+When it happens: [e.g., "Only under load", "Gradually even at idle", "After specific operations"]
+
+Code sections most likely related to the leak:
+
+[PASTE RELEVANT CODE HERE]
+
+Any profiler output or heap snapshots available:
+
+[PASTE OR DESCRIBE PROFILER DATA]
+
+Analyze:
+
+## Leak Pattern Identification
+[Based on symptoms, what type of leak is this likely to be — object accumulation, event listener buildup, closure capture, cache without eviction, timer without clearance]
+
+## Code Suspects
+[For each suspicious code section:]
+- What it does
+- Why it might be leaking
+- How to verify (specific test or profiler query)
+- The fix
+
+## Memory Profiling Commands
+[Exact commands to run in [RUNTIME] to capture heap data and identify the leaking objects]
+
+## The Fix
+[Complete corrected code with comments explaining what changed and why]
+
+## Prevention Patterns
+[Coding patterns to adopt going forward to prevent this class of leak — with code examples]
+
+## Verification Test
+[How to confirm the leak is fixed — specific test that will fail before the fix and pass after]
+```
+
+---
+
+### DBG-07: API Debugging Checklist
+
+```
+I'm having trouble with an API call that isn't working as expected. Walk me through a systematic debugging process.
+
+What I'm calling: [METHOD] [URL]
+Expected behavior: [WHAT SHOULD HAPPEN]
+Actual behavior: [WHAT IS HAPPENING — include status code, response body, error message]
+
+Request details:
+```
+Headers: [PASTE HEADERS]
+Body: [PASTE REQUEST BODY]
+Auth: [TYPE OF AUTH USED]
+```
+
+Response received:
+```
+Status: [STATUS CODE]
+Headers: [RESPONSE HEADERS]
+Body: [RESPONSE BODY]
+```
+
+Environment: [Local / Staging / Production]
+Library/tool used: [e.g., fetch, axios, requests, curl]
+
+Work through this checklist systematically:
+
+## Layer 1: Request Construction
+[Is the URL correct? Are headers properly formatted? Is the body the right content type? Are required fields present?]
+
+## Layer 2: Authentication
+[Is the token/key valid? Has it expired? Is it in the right header? Does it have the required scopes?]
+
+## Layer 3: Network
+[Can you reach the server? Is it a CORS issue (browser only)? Is there a proxy intercepting?]
+
+## Layer 4: Server-Side
+[What does the server log show? Is this a 4xx client error or 5xx server error? Is there a more detailed error in the response?]
+
+## Layer 5: Data Validation
+[Does the request body match the API schema exactly? Are types correct (string vs int)? Are required fields missing?]
+
+## Most Likely Cause
+[Based on the information provided, what is the single most likely cause]
+
+## Fix
+[Corrected request with explanation]
+
+## Curl Equivalent
+[The equivalent curl command to test this in isolation]
+```
+
+---
+
 ## Section 4: Refactoring
 
 ### REF-01: Legacy Code Modernizer
@@ -624,6 +1025,148 @@ Show the complete refactored version with the pattern applied. Use comments to h
 
 Step 4 — MIGRATION PATH
 How to incrementally refactor from the old code to the new structure without breaking anything.
+```
+
+---
+
+### REF-04: Test-Driven Refactor Guide
+
+```
+I need to refactor the following [LANGUAGE] code but I'm afraid of breaking things. Guide me through a safe, test-driven refactoring process.
+
+Code to refactor:
+
+[PASTE CODE HERE]
+
+Refactoring goal: [e.g., "Split this 300-line class into smaller services", "Replace this if-chain with a strategy pattern"]
+Existing tests: [DESCRIBE OR PASTE EXISTING TESTS, or "None"]
+
+Generate a step-by-step plan:
+
+## Step 1: Characterization Tests
+[Write tests that lock down the CURRENT behavior — not what it should do, but what it actually does right now. These are our safety net.]
+```
+[Test code]
+```
+
+## Step 2: Identify Safe Refactoring Moves
+[List only behavior-preserving transformations in the right order: extract method, rename, move, inline — no logic changes yet]
+
+## Step 3: Refactoring Sequence
+For each move:
+### Move N: [Name of transformation]
+- What to do (exact mechanical steps)
+- Run these tests after: [which tests to verify]
+- What can go wrong: [watch out for]
+
+## Step 4: The Structural Change
+[Only after the safety net is in place — the actual design improvement with new tests]
+
+## Step 5: Cleanup
+[Remove characterization tests that are now covered by better tests, update documentation]
+
+## Rollback Point
+[At which step can you safely stop and commit a partial refactor if time runs out]
+```
+
+---
+
+### REF-05: String/Magic Value Eliminator
+
+```
+Find and eliminate all magic numbers, magic strings, and hardcoded values from the following [LANGUAGE] code. Replace them with named constants, enums, or configuration.
+
+Code:
+
+[PASTE CODE HERE]
+
+For each magic value found:
+
+| Line | Value | Type | Problem | Replacement Name | Where to Define |
+|------|-------|------|---------|-----------------|-----------------|
+
+Rules for replacements:
+- Numbers: Use named constants (MAX_RETRY_COUNT = 3, not RETRY = 3)
+- Strings: Use enums or string constants where values form a set; use config for environment-specific values
+- URLs/endpoints: Move to configuration, never hardcode
+- Time durations: Named constants with units in the name (TIMEOUT_MS = 5000, not TIMEOUT = 5)
+- Feature flags: Boolean constants with descriptive names
+
+After the table, provide the refactored code with:
+- Constants defined at the top of the file (or in a separate constants file if there are many)
+- Enums defined for any value that belongs to a finite set
+- Config entries called out with: `# MOVE TO CONFIG: [env var name]` comments
+
+Also flag any values that look like they should come from environment variables or a config file but are currently hardcoded in the source.
+```
+
+---
+
+### REF-06: Error Handling Hardener
+
+```
+Audit and improve the error handling in the following [LANGUAGE] code. Current error handling is [DESCRIBE: nonexistent / inconsistent / swallowing errors / too broad].
+
+Code:
+
+[PASTE CODE HERE]
+
+Apply these error handling principles:
+
+## 1. Catch Specific Exceptions
+[Replace broad catch-all handlers with specific exception types. For each bare `except` or `catch (Exception e)`, identify what specific exceptions can actually be thrown and handle them appropriately]
+
+## 2. Never Swallow Errors Silently
+[Find every empty catch block or caught-and-ignored exception. For each: either handle it properly, log it with context, or re-throw it]
+
+## 3. Add Context to Error Messages
+[When re-throwing or wrapping exceptions, ensure the message includes: what operation failed, what input caused it, any relevant state]
+
+## 4. Fail Fast on Programmer Errors
+[Distinguish between recoverable errors (user input, network, DB) and programmer errors (null dereference, wrong type). Programmer errors should crash loudly, not be caught]
+
+## 5. Resource Cleanup
+[Ensure all resources (files, connections, locks) are released even when errors occur — using finally blocks, context managers, or RAII patterns]
+
+## 6. Error Propagation Strategy
+[Decide at each layer: handle here or propagate up? Define the boundary where errors become user-facing messages]
+
+Deliver the fully hardened code with a summary of every change made and why.
+```
+
+---
+
+### REF-07: Null Safety Refactor
+
+```
+Refactor the following [LANGUAGE] code to eliminate null/undefined/None reference errors. This code is crashing in production with null pointer exceptions.
+
+Code:
+
+[PASTE CODE HERE]
+
+Crash reports or known null scenarios:
+
+[DESCRIBE WHERE NULLS ARE CAUSING PROBLEMS]
+
+Apply these strategies:
+
+## 1. Null Audit
+[Find every place a null/undefined/None could enter the system — function parameters, API responses, database results, optional fields]
+
+## 2. Defensive Checks (where nulls are legitimate)
+[For values that CAN be null by design, add proper null checks with sensible defaults or early returns]
+
+## 3. Type Strengthening (where nulls should never occur)
+[Add type annotations, non-null assertions, or runtime validation at system boundaries so nulls are caught at entry, not deep in business logic]
+
+## 4. Optional/Maybe Pattern (where applicable)
+[For [LANGUAGE], show how to use Optional, Maybe, or the nullish coalescing operator to express optional values explicitly rather than implicitly]
+
+## 5. Null Object Pattern (where appropriate)
+[If a null object causes cascading null checks, show how to create a null-object that implements the same interface with safe default behavior]
+
+Deliver the refactored code plus a one-page Null Safety Policy for the codebase going forward.
 ```
 
 ---
@@ -790,6 +1333,157 @@ Provide:
 
 ---
 
+### ARCH-05: API Contract Designer
+
+```
+Design a complete API contract between [SERVICE A] and [SERVICE B]. This contract will be the source of truth both teams build against.
+
+Context:
+- What Service A needs from Service B: [DESCRIBE THE DATA/OPERATIONS NEEDED]
+- SLA requirements: [e.g., "p99 < 200ms, 99.9% uptime"]
+- Authentication between services: [e.g., "mTLS / service account JWT / API key"]
+- Expected call volume: [e.g., "~500 calls/min at peak"]
+
+Design the contract with:
+
+## Endpoints
+For each endpoint:
+```yaml
+POST /api/v1/[resource]
+Description: [what it does]
+Auth: [required auth]
+Rate limit: [calls per minute]
+Request:
+  headers:
+    X-Request-ID: string (required, UUID for tracing)
+    Content-Type: application/json
+  body:
+    [field]: [type] ([required/optional]) — [description]
+Response 200:
+  [field]: [type] — [description]
+Response 4xx/5xx:
+  error: string
+  code: string (machine-readable error code)
+  request_id: string
+```
+
+## Versioning Strategy
+[How breaking changes will be handled — URL versioning, header versioning, deprecation timeline]
+
+## Error Code Catalog
+[Every machine-readable error code this API can return, with meaning and recommended client action]
+
+## Retry Policy
+[Which errors are safe to retry, with what backoff strategy]
+
+## Contract Testing
+[How both teams verify the contract is honored — suggest a contract testing tool like Pact]
+
+## Change Process
+[How changes to this contract must be proposed, reviewed, and deployed safely]
+```
+
+---
+
+### ARCH-06: Caching Strategy Designer
+
+```
+Design a caching strategy for the following system. I need specific recommendations — not "use Redis" but exactly what to cache, where, with what TTL, and what invalidation strategy.
+
+System description: [DESCRIBE YOUR SYSTEM]
+Current performance problem: [e.g., "DB queries taking 800ms average", "Repeated API calls to slow third party"]
+Data characteristics:
+- Read/write ratio: [e.g., "95% reads, 5% writes"]
+- How often data changes: [e.g., "User profile changes a few times per week"]
+- How stale is acceptable: [e.g., "Pricing must be fresh within 5 minutes"]
+- Data size: [e.g., "Average object is 2KB, working set is ~50k objects"]
+
+Design the strategy:
+
+## Cache Layer Recommendation
+[Which layer(s) to cache at: CDN / reverse proxy / application / database query cache — with reasoning]
+
+## What to Cache
+For each data type:
+| Data | Cache Location | TTL | Invalidation Trigger | Cache Key Pattern |
+|------|---------------|-----|---------------------|-------------------|
+
+## Invalidation Strategy
+[For each cache: how is it invalidated when data changes — TTL expiry / event-driven / write-through / manual purge]
+
+## Cache Warming
+[How to populate the cache after a cold start or deployment so the first users don't get slow responses]
+
+## Cache Miss Handling
+[What happens on a miss — thundering herd protection, request coalescing, background refresh]
+
+## Failure Mode
+[What happens when the cache is unavailable — graceful degradation plan]
+
+## Implementation
+[Minimal code showing the cache-aside pattern for the highest-value cache identified above]
+```
+
+---
+
+### ARCH-07: Monitoring & Observability Planner
+
+```
+Design a complete monitoring and observability strategy for [SYSTEM NAME]. I need to know what to measure, what to alert on, and how to debug production issues faster.
+
+System type: [e.g., "REST API serving mobile clients", "batch data pipeline", "microservices platform"]
+Tech stack: [LANGUAGES, FRAMEWORKS, CLOUD PROVIDER]
+Current observability: [e.g., "Basic server CPU/memory alerts, no application metrics"]
+Team size: [NUMBER] engineers, [NUMBER] on-call
+
+Design the full strategy:
+
+## The Three Pillars
+
+### Metrics
+[List every metric to collect, organized by:]
+- Business metrics (revenue, conversions, active users)
+- Application metrics (request rate, error rate, latency percentiles)
+- Infrastructure metrics (CPU, memory, disk, network)
+
+For each metric: name, type (counter/gauge/histogram), labels, alert threshold
+
+### Logs
+[Structured logging schema — exactly what fields every log line should include]
+```json
+{
+  "timestamp": "ISO8601",
+  "level": "INFO|WARN|ERROR",
+  "service": "service-name",
+  "trace_id": "uuid",
+  "user_id": "optional",
+  "duration_ms": 0,
+  "message": "...",
+  "[custom fields]": "..."
+}
+```
+[Log sampling strategy for high-volume services]
+
+### Traces
+[Which operations to instrument with distributed tracing, how to propagate trace context]
+
+## Dashboards
+[3-5 dashboards to build, with exact panels and what each one is for]
+
+## Alerts
+[Alert runbook table:]
+| Alert | Condition | Severity | Runbook Link | Auto-Remediation |
+|-------|-----------|----------|-------------|-----------------|
+
+## SLOs & Error Budgets
+[Define SLIs, SLOs, and how to track error budget burn rate]
+
+## Recommended Stack
+[Specific tool recommendations for this system's scale and budget]
+```
+
+---
+
 ## Section 6: Claude Code Specific
 
 ### CC-01: CLAUDE.md Generator
@@ -934,6 +1628,79 @@ My standards for this type of code:
 - Accessibility: [e.g., "WCAG 2.1 AA compliant"]
 
 Generate the meta-prompt, then demonstrate it by using it once to generate a sample [EXAMPLE OF WHAT TO GENERATE].
+```
+
+---
+
+### CC-05: Project Kickoff Prompt
+
+```
+I'm starting a new project and want Claude Code to be maximally helpful from day one. Help me set up the complete working context.
+
+Project details:
+- Name: [PROJECT NAME]
+- What it does: [1-2 sentences]
+- Tech stack: [LANGUAGES, FRAMEWORKS, TOOLS]
+- Repository structure: [DESCRIBE OR PASTE DIRECTORY TREE]
+- My role: [e.g., "Solo developer", "Tech lead of 3 engineers"]
+- Timeline: [e.g., "MVP in 6 weeks"]
+
+Generate:
+
+## CLAUDE.md (full file, ready to save)
+[Complete project context file that Claude Code will read every session]
+
+## Starter Slash Commands
+[3-5 custom slash command definitions for this project's most common tasks, e.g., /run-tests, /check-types, /deploy-staging]
+
+## Recommended Workflow Prompts
+[5 project-specific prompts tailored to this exact stack — not generic prompts but ones that reference the actual files, frameworks, and patterns in this project]
+
+## First Session Checklist
+[Ordered list of things to do in the first Claude Code session to get maximum value: what files to share, what context to establish, what to build first]
+
+## Pitfalls for This Stack
+[Known gotchas when using Claude Code with [TECH STACK] — common mistakes it makes with this framework, things to always specify]
+```
+
+---
+
+### CC-06: Git Workflow Automator
+
+```
+Create a set of Claude Code prompts and slash commands that automate my git workflow for [PROJECT TYPE, e.g., "a solo side project" / "a team using GitHub Flow" / "a monorepo with multiple services"].
+
+My current workflow steps (I do these manually, often forgetting some):
+1. [STEP 1, e.g., "Pull latest from main"]
+2. [STEP 2, e.g., "Create feature branch with ticket number"]
+3. [STEP 3, e.g., "Run tests before committing"]
+4. [STEP 4, e.g., "Write a meaningful commit message"]
+5. [STEP 5, e.g., "Push and open PR"]
+
+Branch naming convention: [e.g., "feature/TICKET-123-short-description"]
+Commit message format: [e.g., "conventional commits: feat: / fix: / chore:"]
+PR template: [DESCRIBE OR PASTE YOUR PR TEMPLATE]
+
+Generate:
+
+## /start-feature Slash Command
+[Full command definition that: pulls latest, creates branch with right naming, sets up any boilerplate]
+
+## /commit-smart Slash Command
+[Command that: runs lint+tests, generates a conventional commit message from staged changes, commits]
+
+## /ship Slash Command
+[Command that: final checks, pushes, opens PR with description auto-generated from commits]
+
+## Standalone Prompts
+### Commit Message Generator
+[Prompt that takes `git diff --staged` output and produces a perfect conventional commit message]
+
+### PR Description Generator
+[Prompt that takes branch commits and produces a complete PR description matching your template]
+
+### Branch Cleanup Prompt
+[Prompt to identify and safely delete merged branches]
 ```
 
 ---
@@ -1136,6 +1903,100 @@ For each week:
 
 ---
 
+### PROD-06: Code Review Request Writer
+
+```
+Write a structured code review request for the following pull request. I want reviewers to give me useful, targeted feedback — not just LGTM or vague suggestions.
+
+What changed: [DESCRIBE THE CHANGE IN 1-2 SENTENCES]
+Why it changed: [MOTIVATION — bug fix, new feature, tech debt, performance]
+PR link: [URL or "not yet created"]
+Reviewers I'm targeting: [e.g., "Alice (owns auth system)", "Bob (frontend lead)"]
+
+My specific concerns:
+1. [THING I'M UNSURE ABOUT, e.g., "Is the locking strategy correct for concurrent writes?"]
+2. [SECOND CONCERN]
+3. [THIRD CONCERN, or "None — just general review"]
+
+Key code sections to focus on:
+[FILE PATH or description of the important section]
+
+Generate the review request message with:
+
+## Review Request
+
+**Context**
+[1 paragraph background — what problem this solves, why this approach was chosen over alternatives]
+
+**What I'm confident about**
+[What the reviewer can skim — things you've thoroughly tested or that are straightforward]
+
+**What I want eyes on**
+[Numbered list of specific questions for the reviewer, pointed at exact files/functions]
+
+**How to test it locally**
+[Step-by-step instructions to run and verify the change]
+
+**Potential risks**
+[What could go wrong, what edge cases aren't covered yet, what you're deferring]
+
+Also generate: a one-line Slack message to ping the reviewers that gives them enough context to prioritize this review.
+```
+
+---
+
+### PROD-07: Postmortem Writer
+
+```
+Write a blameless postmortem for the following incident. This document will be shared with the team and used to prevent recurrence.
+
+Incident summary:
+- What happened: [DESCRIBE THE INCIDENT]
+- When it started: [START TIME AND TIMEZONE]
+- When it was resolved: [END TIME]
+- Impact: [WHO WAS AFFECTED, HOW MANY USERS, WHAT FUNCTIONALITY WAS DOWN]
+- Severity: [P1/P2/P3]
+
+Timeline of events (paste your notes, Slack messages, or rough timeline):
+[PASTE TIMELINE]
+
+Root cause: [WHAT YOU NOW KNOW CAUSED IT]
+Contributing factors: [OTHER THINGS THAT MADE IT WORSE OR HARDER TO DETECT]
+What went well: [WHAT WORKED IN THE RESPONSE]
+
+Generate the postmortem with:
+
+## Incident Summary
+[Title, date, duration, severity, brief description — suitable for executive summary]
+
+## Impact
+[Quantified: users affected, requests failed, revenue impacted if known, SLA breach if applicable]
+
+## Timeline
+[Clean, formatted timeline with: time | event | who]
+
+## Root Cause
+[Technical explanation of the root cause — specific enough that an engineer can understand exactly what failed and why]
+
+## Contributing Factors
+[What made detection harder, response slower, or impact larger — without blame]
+
+## What Went Well
+[Genuine positives in detection, communication, or response]
+
+## Action Items
+| Action | Owner | Due Date | Priority |
+|--------|-------|----------|----------|
+[Specific, assigned, time-bounded items — not vague "improve monitoring"]
+
+## Lessons Learned
+[2-3 systemic insights that apply beyond this specific incident]
+
+Tone: Blameless, factual, forward-looking. Focus on systems and processes, not people.
+```
+
+---
+
 *End of Claude Code Power User Kit — 50 prompts total*
 
 ---
@@ -1149,31 +2010,51 @@ For each week:
 | PR-03 | Performance Profiling | When you suspect slowdowns |
 | PR-04 | Code Smell Detection | During refactoring sprints |
 | PR-05 | Test Coverage Analysis | When coverage drops or tests are missing |
+| PR-06 | Dependency Audit | Periodic security and bloat review |
+| PR-07 | Accessibility Audit | Before shipping UI to end users |
+| PR-08 | Code Complexity Reducer | When functions are hard to understand or test |
 | DOC-01 | README Generator | New project or README rewrite |
 | DOC-02 | Inline Comment Writer | Legacy code or complex algorithms |
 | DOC-03 | API Documentation | Before sharing APIs with other teams |
 | DOC-04 | Architecture Decision Record | After making a significant tech decision |
 | DOC-05 | Changelog Entry | Before every release |
+| DOC-06 | Runbook Writer | Before going on-call for a service |
+| DOC-07 | Onboarding Guide | When a new engineer joins the team |
+| DOC-08 | Error Message Writer | When error messages are vague or frustrating |
 | DBG-01 | Error Explainer | Hitting a new error you don't understand |
 | DBG-02 | Root Cause Analysis | Bug keeps coming back |
 | DBG-03 | Rubber Duck Walkthrough | Logic bug with no error message |
 | DBG-04 | Race Condition Finder | Intermittent bugs in concurrent code |
+| DBG-05 | Log Analyzer | During or after an incident |
+| DBG-06 | Memory Leak Hunter | Gradual memory growth in long-lived processes |
+| DBG-07 | API Debugging Checklist | API call not working as expected |
 | REF-01 | Legacy Code Modernizer | Updating old codebases |
 | REF-02 | Function Extractor | Functions growing too large |
 | REF-03 | Design Pattern Applier | Structural code problems |
+| REF-04 | Test-Driven Refactor Guide | Refactoring without breaking things |
+| REF-05 | Magic Value Eliminator | Code full of unexplained numbers/strings |
+| REF-06 | Error Handling Hardener | Inconsistent or missing error handling |
+| REF-07 | Null Safety Refactor | Null pointer crashes in production |
 | ARCH-01 | System Design | Starting a new system from scratch |
 | ARCH-02 | Database Schema Designer | Designing data models |
 | ARCH-03 | Tech Stack Evaluator | Technology selection decisions |
 | ARCH-04 | Migration Planner | Moving between systems safely |
+| ARCH-05 | API Contract Designer | Defining service-to-service contracts |
+| ARCH-06 | Caching Strategy Designer | Performance problems from repeated data fetching |
+| ARCH-07 | Monitoring & Observability Planner | Setting up production visibility |
 | CC-01 | CLAUDE.md Generator | Setting up Claude Code on a project |
 | CC-02 | Slash Command Creator | Automating repetitive tasks |
 | CC-03 | Multi-Agent Task Planner | Large parallel workloads |
 | CC-04 | Code Generation Prompt | Creating reusable generation prompts |
+| CC-05 | Project Kickoff Prompt | Starting a new project with Claude Code |
+| CC-06 | Git Workflow Automator | Streamlining branch/commit/PR workflow |
 | PROD-01 | Standup Generator | Daily standups |
 | PROD-02 | Technical Spec Writer | Planning new features |
 | PROD-03 | PR Description Writer | Every pull request |
 | PROD-04 | Interview Prep | Job search preparation |
 | PROD-05 | Learning Roadmap | Learning new technologies |
+| PROD-06 | Code Review Request Writer | Getting high-quality PR feedback |
+| PROD-07 | Postmortem Writer | After every production incident |
 
 ---
 
