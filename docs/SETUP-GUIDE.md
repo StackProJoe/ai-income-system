@@ -84,11 +84,28 @@ Claude will replace all placeholders in one pass and trigger a Vercel redeploy.
 
 ---
 
-## After Setup
+## Step 5: Activate Automated Schedules
 
-Everything is automated:
-- **Weekly Tuesdays**: Claude posts 2 Reddit posts driving traffic to your store + site
-- **Monthly (1st Monday)**: Claude adds new review pages to the affiliate site
-- **Monthly (last Friday)**: Claude logs performance and optimizes
+Three remote Claude Code agents are already created but paused. After you push the project repo to GitHub (a second GitHub repo for THIS project, separate from the affiliate site), tell Claude:
 
-Your only job: check your Gumroad and affiliate dashboards occasionally.
+> "My project GitHub URL is https://github.com/YOUR_USERNAME/REPO_NAME — please activate the schedules."
+
+Claude will update all 3 schedules with the repo URL and enable them.
+
+**Schedule IDs (already created, currently disabled):**
+- `trig_01A5hhrakdf4oem7R9m7Aj6w` — Weekly Reddit marketing (every Tuesday 10am ET)
+- `trig_01GMnFjmDUwCL5QELY1JYL8R` — Monthly content expansion (first Monday 9am ET)
+- `trig_01Do1zPffLm5bkAWabYk7cGV` — Monthly performance review (last Friday 9am ET)
+
+View/manage all schedules: https://claude.ai/code/routines
+
+---
+
+## After Full Setup
+
+Everything runs autonomously:
+- **Weekly Tuesdays**: Agent posts 2 Reddit posts driving traffic to your store + site
+- **Monthly (1st Monday)**: Agent adds new AI tool reviews to the affiliate site
+- **Monthly (last Friday)**: Agent logs performance and surfaces optimization notes
+
+Your only job: check Gumroad and affiliate dashboards when you feel like it, and give Claude the data when the performance agent asks.
