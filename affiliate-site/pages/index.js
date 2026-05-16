@@ -1,115 +1,87 @@
-import Image from "next/image";
-import localFont from "next/font/local";
+import Layout from '../components/Layout'
+import ComparisonTable from '../components/ComparisonTable'
+import AffiliateButton from '../components/AffiliateButton'
+import Link from 'next/link'
 
-const geistSans = localFont({
-  src: "./fonts/GeistVF.woff",
-  variable: "--font-geist-sans",
-  weight: "100 900",
-});
-const geistMono = localFont({
-  src: "./fonts/GeistMonoVF.woff",
-  variable: "--font-geist-mono",
-  weight: "100 900",
-});
+const TOOLS = [
+  {
+    name: 'Writesonic',
+    score: 9.1,
+    price: '$16/mo',
+    bestFor: 'Long-form content + SEO',
+    affiliateUrl: 'WRITESONIC_AFFILIATE_URL',
+  },
+  {
+    name: 'Copy.ai',
+    score: 8.8,
+    price: '$49/mo',
+    bestFor: 'Marketing copy & GTM teams',
+    affiliateUrl: 'COPYAI_AFFILIATE_URL',
+  },
+  {
+    name: 'Jasper',
+    score: 8.5,
+    price: '$49/mo',
+    bestFor: 'Brand-consistent content at scale',
+    affiliateUrl: 'JASPER_AFFILIATE_URL',
+  },
+  {
+    name: 'NeuronWriter',
+    score: 8.3,
+    price: '$23/mo',
+    bestFor: 'SEO-optimized blog content',
+    affiliateUrl: 'NEURONWRITER_AFFILIATE_URL',
+  },
+]
 
 export default function Home() {
   return (
-    <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
-    >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              pages/index.js
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <Layout>
+      <div className="text-center mb-12">
+        <h1 className="text-4xl font-bold text-gray-900 mb-4">
+          Best AI Writing Tools in 2026
+        </h1>
+        <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+          I tested the top AI writing tools so you don&apos;t have to waste money on the wrong one. Here&apos;s what actually works.
+        </p>
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+      <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
+        <p className="text-sm text-blue-800">
+          <strong>Quick Verdict:</strong> For most users, <strong>Writesonic</strong> offers the best value at $16/mo with the strongest long-form output. If you need a full GTM platform, <strong>Copy.ai</strong> is the enterprise choice.
+        </p>
+      </div>
+
+      <ComparisonTable tools={TOOLS} />
+
+      <h2 className="text-2xl font-bold text-gray-900 mt-12 mb-6">Detailed Reviews</h2>
+
+      <div className="grid gap-6">
+        {[
+          { name: 'Writesonic', href: '/reviews/writesonic', desc: 'Best overall value. Strong long-form output, built-in SEO tools, and the lowest price on this list.', score: 9.1 },
+          { name: 'Copy.ai', href: '/reviews/copy-ai', desc: 'The GTM platform choice. Best for marketing teams that need workflows, not just a writing assistant.', score: 8.8 },
+          { name: 'Jasper', href: '/reviews/jasper', desc: 'Best for brand voice. The only tool with serious brand training features for consistent output at scale.', score: 8.5 },
+          { name: 'NeuronWriter', href: '/reviews/neuronwriter', desc: 'Best for SEO. Built around SERP analysis — if you write for search traffic, this is the tool.', score: 8.3 },
+        ].map(tool => (
+          <Link key={tool.name} href={tool.href} className="block border border-gray-200 rounded-lg p-5 hover:border-blue-300 transition-colors">
+            <div className="flex items-start justify-between">
+              <div>
+                <h3 className="font-bold text-gray-900 text-lg">{tool.name}</h3>
+                <p className="text-gray-600 mt-1">{tool.desc}</p>
+              </div>
+              <span className="text-2xl font-bold text-blue-600 ml-4">{tool.score}</span>
+            </div>
+          </Link>
+        ))}
+      </div>
+
+      <div className="mt-12 border-t pt-8">
+        <h2 className="text-2xl font-bold text-gray-900 mb-4">Comparisons</h2>
+        <div className="flex gap-4 flex-wrap">
+          <Link href="/vs/writesonic-vs-jasper" className="text-blue-600 hover:underline">Writesonic vs Jasper</Link>
+          <Link href="/vs/copy-ai-vs-jasper" className="text-blue-600 hover:underline">Copy.ai vs Jasper</Link>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
-  );
+      </div>
+    </Layout>
+  )
 }
