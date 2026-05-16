@@ -341,6 +341,35 @@ Tone: [WARM / PROFESSIONAL / PLAYFUL] — pick one and apply consistently.
 
 ---
 
+**SALES-07: Thank You Email After Purchase**
+
+```
+Write a personalized thank you email for [BUSINESS NAME] to send immediately after a customer purchases [PRODUCT/SERVICE] at $[PRICE].
+
+Customer context: [DESCRIBE YOUR TYPICAL BUYER — their goals, why they bought]
+What they get: [BRIEFLY DESCRIBE WHAT THEY PURCHASED]
+Next step for customer: [DOWNLOAD LINK / ONBOARDING CALL / DELIVERY / ACCESS INFO]
+Upsell or offer (if any): [OPTIONAL — mention related product or service, or write "none"]
+
+Write a thank you email that:
+- Opens with genuine appreciation (not corporate-sounding)
+- Reassures them they made the right decision (social proof or specific benefit)
+- Explains clearly what happens next and how long it takes
+- Sets expectations for support and communication
+- If applicable: soft mention of a complementary product or upgrade (no hard sell)
+- Closes with warmth and an invitation to ask questions
+
+Include:
+- Subject line (under 50 characters)
+- Preview text (40-60 characters)
+- Full email body (under 250 words)
+- Tone: [WARM / PROFESSIONAL / CELEBRATORY] — match your brand voice
+
+This email should make them feel excited about their purchase and confident they made the right choice.
+```
+
+---
+
 ## SECTION 3: Customer Service (4 Prompts)
 
 ---
@@ -441,6 +470,34 @@ For each version include:
 - CTA
 
 Also provide: 3 follow-up survey questions to send 7 days after cancellation to learn what went wrong.
+```
+
+---
+
+**CS-05: Testimonial & Case Study Request**
+
+```
+Write a request email for [BUSINESS NAME] asking a satisfied customer [CUSTOMER NAME] to provide a testimonial or case study about their experience.
+
+What customer bought: [PRODUCT/SERVICE NAME + PRICE]
+How long they've been a customer: [TIME PERIOD]
+Known results they achieved: [SPECIFIC OUTCOME OR BENEFIT THEY GOT — sales increase, time saved, problem solved, etc.]
+Incentive (if any): [DISCOUNT / FREE MONTH / CREDIT / FEATURE REQUEST / NONE]
+
+Write an email that:
+- Opens by praising a specific result or outcome you've noticed
+- Explains why their story matters (who it would help)
+- Makes the ask simple and low-effort
+- Provides 2-3 optional frameworks they can use to respond (bullet points work)
+- Sets clear expectations (how long it takes, what you'll do with it)
+- Includes the incentive (if any) as a thank you, not a bribe
+
+Also provide:
+- 5-7 follow-up interview questions to ask if they agree, designed to extract a compelling case study
+- A simple template they can fill in: [customer background] → [problem] → [how they used your product] → [specific results] → [what they'd tell others]
+- Instructions for turning their response into a short written testimonial or 1-page case study
+
+Tone: [WARM / PROFESSIONAL / PERSONAL] — make it feel like you're asking a friend, not a transaction.
 ```
 
 ---
@@ -743,6 +800,49 @@ Analyze and provide:
 7. Red flags in my current pricing (if any)
 
 Be direct. Tell me what to charge and why — don't just give me frameworks.
+```
+
+---
+
+**STRAT-06: Go-to-Market Launch Checklist**
+
+```
+Build a go-to-market (GTM) launch checklist for [BUSINESS NAME] launching [PRODUCT/SERVICE].
+
+Launch date: [DATE]
+Target audience: [DESCRIBE YOUR IDEAL FIRST CUSTOMERS]
+Primary launch channel: [DIRECT SALES / EMAIL LIST / SOCIAL MEDIA / PRESS / PARTNERSHIPS / CONTENT / PAID ADS]
+Budget for launch: $[AMOUNT] (or "bootstrapped")
+Team size for launch: [SOLO / [NUMBER] PEOPLE]
+
+Create a detailed checklist organized by timeline:
+
+PRE-LAUNCH (4-6 weeks before):
+- Product readiness checks (quality, edge cases, support plan)
+- Messaging and positioning (value prop, audience pain points, differentiation)
+- Sales/marketing materials (landing page, email copy, sales deck, case studies)
+- Team preparation (training, talking points, objection handling)
+- Infrastructure (payment processing, fulfillment, customer support channels)
+
+LAUNCH WEEK:
+- Day-by-day tactical tasks with responsible owner and timing
+- Communications (announce to email list, social media, press)
+- Customer success prep (onboarding docs, support readiness)
+- Monitoring and metrics setup (what to track)
+
+POST-LAUNCH (first 30 days):
+- Customer success and support standards
+- Feedback collection (surveys, interviews, direct outreach)
+- Iteration based on early learnings
+- Success metrics assessment
+
+For each item include: Task, Owner, Due date, Status, Notes.
+
+Also provide:
+- A pre-launch quality checklist (5-7 final checks before go-live)
+- Launch day communication templates (email, social post)
+- 3 key success metrics to track in first 30 days
+- Red flags that mean you need to delay or pivot
 ```
 
 ---
