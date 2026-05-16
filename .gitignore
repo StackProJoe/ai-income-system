@@ -1,0 +1,7 @@
+node_modules/
+.next/
+.env.local
+.env
+*.env
+affiliate-site/.next/
+affiliate-site/node_modules/
