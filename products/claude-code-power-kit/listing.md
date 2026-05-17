@@ -7,71 +7,62 @@ Claude Code Power User Kit — 50 Prompts That 10x Your Dev Workflow
 $29
 
 ## Summary (shown under title)
-Stop writing mediocre prompts and getting mediocre code. This pack gives you 50 battle-tested, structured prompts for every stage of development — so Claude Code does exactly what you need, every time.
+A reference file containing 50 Claude Code prompts organized into 7 categories: code review, documentation, debugging, refactoring, architecture, Claude Code-specific workflows, and developer productivity.
 
 ## Description (full)
 
-Most developers use Claude Code like a junior intern: "explain this," "fix this bug," "write a function." They get generic answers because they ask generic questions.
-
-This pack changes that.
-
-**50 production-grade prompts, built for how Claude actually thinks.** Every prompt is structured with the right context, output format, and constraints to get Claude Code operating at senior-engineer level — not helpful-but-vague level.
+**Claude Code Power User Kit** is a downloadable Markdown file containing 50 structured prompts for developers who use Claude Code. Each prompt includes a unique ID, a description of what it produces, and [BRACKETED] placeholders where you substitute your own code, filenames, or context.
 
 ---
 
-### What's Inside
+### Contents by Section
 
-**Section 1: Code Review & Quality (5 prompts)**
-Deep code review with severity ratings, OWASP security audits with CVE references, performance profiling for complexity and memory leaks, code smell detection using Fowler's full catalog, and test coverage analysis that generates real tests — not placeholder assertions.
+**Section 1: Code Review & Quality (8 prompts)**
+Prompts for code review with severity classification, OWASP security audits referencing common CVEs, performance analysis covering algorithmic complexity and memory usage, code smell detection using established refactoring patterns, and test coverage gap analysis that produces concrete test cases.
 
-**Section 2: Documentation (5 prompts)**
-README generator with every section filled in, inline comment writer that comments the WHY not the WHAT, OpenAPI 3.0 API documentation, Architecture Decision Records in MADR format, and Keep a Changelog-formatted release notes.
+**Section 2: Documentation (8 prompts)**
+Prompts for generating README files with all standard sections, inline code comments focused on intent rather than mechanics, OpenAPI 3.0 spec documentation, Architecture Decision Records in MADR format, and changelog entries following Keep a Changelog conventions.
 
-**Section 3: Debugging (4 prompts)**
-Error explainer with 3 ordered things to check, root cause analysis using the 5 Whys method, rubber duck walkthrough that tracks variable state line by line, and race condition finder for concurrent code.
+**Section 3: Debugging (7 prompts)**
+Prompts for error message explanation with ordered diagnostic steps, 5 Whys root cause analysis, variable-state tracing walkthroughs, race condition identification in concurrent code, and edge case enumeration.
 
-**Section 4: Refactoring (3 prompts)**
-Legacy code modernizer that never changes behavior, function extractor enforcing Single Responsibility Principle, and design pattern applier that identifies the right pattern for your specific problem.
+**Section 4: Refactoring (7 prompts)**
+Prompts for behavior-preserving legacy code modernization, function extraction following Single Responsibility Principle, design pattern identification and application, and dependency injection refactoring.
 
-**Section 5: Architecture & Planning (4 prompts)**
-Full system design with components, data flow, schema, and failure points; database schema designer with indexes and example queries; tech stack evaluator with weighted scoring matrix; zero-downtime migration planner with rollback procedures.
+**Section 5: Architecture & Planning (7 prompts)**
+Prompts for system design documents covering components, data flow, schema, and failure modes; database schema design with indexes and sample queries; tech stack comparison using a weighted scoring matrix; and migration planning with rollback steps.
 
-**Section 6: Claude Code Specific (4 prompts)**
-CLAUDE.md generator for project context, slash command creator for repetitive tasks, multi-agent task planner for parallel workstreams, and a meta-prompt generator that creates prompts for you.
+**Section 6: Claude Code Workflows (6 prompts)**
+Prompts for generating CLAUDE.md project context files, creating reusable slash commands, designing multi-agent task plans, writing MCP server configurations, and building prompt templates.
 
-**Section 7: Productivity (5 prompts)**
-Standup generator from git commits, technical spec writer with testable requirements, PR description writer, interview prep with full sample answers, and a 12-week learning roadmap built around building real things.
+**Section 7: Developer Productivity (7 prompts)**
+Prompts for generating standup summaries from git history, writing technical specs with acceptance criteria, drafting pull request descriptions, preparing for technical interviews, and building a structured learning roadmap.
+
+---
+
+### Format
+
+- Delivered as a single `.md` file
+- Each prompt has a reference ID (e.g., PR-01, DBG-03) for quick lookup
+- All variable inputs are marked with [BRACKETS]
+- Includes a Quick Reference Index table at the end
+
+### How to Use
+
+1. Download and open the Markdown file
+2. Locate the prompt you need using the index or section headers
+3. Copy the prompt, fill in the bracketed placeholders with your specifics
+4. Paste into Claude Code
+
+Compatible with Claude Code (CLI), Claude.ai, and any Claude API integration. No account, API key, or additional setup required beyond a Claude subscription.
 
 ---
 
 ### Who This Is For
 
-- Developers who use Claude Code daily and want to get more out of every session
-- Engineers who write the same prompts from scratch every time and get inconsistent results
-- Tech leads who want to standardize how their team uses AI in code review and documentation
-- Developers preparing for interviews or leveling up in a new domain
-
-### Who This Is NOT For
-
-This is not a "ChatGPT prompts" pack. Every prompt is specifically designed for Claude Code's context window, tool use, and file editing capabilities. If you're using a different AI tool, these won't transfer cleanly.
-
----
-
-### How It Works
-
-1. Download the markdown file
-2. Open it alongside Claude Code
-3. Find the prompt for what you need
-4. Copy it, fill in the [BRACKETED] placeholders with your specifics
-5. Paste into Claude Code
-
-No setup. No API key. No configuration. Open the file and use it.
-
----
-
-**One prompt that finds a security vulnerability your review missed pays for this pack 100x over.**
-
-Get the pack. Stop writing weak prompts.
+- Developers who use Claude Code regularly and want pre-structured prompts rather than writing them from scratch each time
+- Engineering teams looking to standardize AI-assisted code review or documentation workflows
+- Developers who want prompts specifically designed for Claude's tool-use and file-editing capabilities rather than generic AI prompt packs
 
 ## Tags
 claude code, ai prompts, developer tools, prompt engineering, code review, software development, productivity, claude ai, programming, developer productivity, prompt pack, coding assistant

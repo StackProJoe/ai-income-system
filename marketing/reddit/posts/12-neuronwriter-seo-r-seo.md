@@ -1,4 +1,4 @@
-# Subreddit: r/SEO
+﻿# Subreddit: r/SEO
 # Flair: Tool Review
 # Title: Honest NeuronWriter review after 4 months — what it's actually good at and where it falls short
 
@@ -62,4 +62,4 @@ This is useful. Not magical, but useful.
 
 ---
 
-*I have a more detailed breakdown of this with specific test cases on my AI tools review site: AFFILIATE_SITE_URL — also covers Writesonic, Jasper, and the AI writing tool landscape generally.*
+*I have a more detailed breakdown of this with specific test cases on my AI tools review site: https://ai-tools-reviewed.vercel.app — also covers Writesonic, Jasper, and the AI writing tool landscape generally.*

@@ -1,4 +1,4 @@
-{
+﻿{
   "rotation": [
     { "week": 1, "subreddits": ["r/ClaudeAI", "r/SideProject"] },
     { "week": 2, "subreddits": ["r/ChatGPT", "r/freelance"] },
@@ -6,10 +6,10 @@
     { "week": 4, "subreddits": ["r/MachineLearning", "r/Entrepreneur"] }
   ],
   "products": {
-    "claude-code-power-kit": { "gumroad_url": "PLACEHOLDER_URL_1", "price": "$29" },
-    "freelancer-ai-kit": { "gumroad_url": "PLACEHOLDER_URL_2", "price": "$39" },
-    "developer-productivity-pack": { "gumroad_url": "PLACEHOLDER_URL_3", "price": "$19" },
-    "business-automation-playbook": { "gumroad_url": "PLACEHOLDER_URL_4", "price": "$47" }
+    "claude-code-power-kit": { "gumroad_url": "https://claudemint.gumroad.com/l/szzhld", "price": "$29" },
+    "freelancer-ai-kit": { "gumroad_url": "https://claudemint.gumroad.com/l/isexmy", "price": "$39" },
+    "developer-productivity-pack": { "gumroad_url": "https://claudemint.gumroad.com/l/cmvhj", "price": "$19" },
+    "business-automation-playbook": { "gumroad_url": "https://claudemint.gumroad.com/l/mhogs", "price": "$47" }
   },
-  "affiliate_site_url": "PLACEHOLDER_SITE_URL"
+  "https://ai-tools-reviewed.vercel.app": "https://ai-tools-reviewed.vercel.app"
 }

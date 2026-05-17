@@ -1,4 +1,4 @@
-# Subreddit: r/freelance
+﻿# Subreddit: r/freelance
 # Flair: Tips & Resources
 # Title: 4 AI prompts that handle the awkward business side of freelancing (the stuff no one teaches you)
 
@@ -74,4 +74,4 @@ Freelancing is 50% doing the work and 50% managing relationships. AI is genuinel
 
 ---
 
-*I put together a bunch more of these (including a full client onboarding sequence, the "I need to raise my rates" email, and a retainer pitch template) in a pack I sell: Freelancer's AI Command Center ($39) — GUMROAD_URL_2 if that's useful.*
+*I put together a bunch more of these (including a full client onboarding sequence, the "I need to raise my rates" email, and a retainer pitch template) in a pack I sell: Freelancer's AI Command Center ($39) — https://claudemint.gumroad.com/l/isexmy if that's useful.*

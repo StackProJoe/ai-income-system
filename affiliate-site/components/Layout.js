@@ -5,7 +5,7 @@ export default function Layout({ children, title, description }) {
   const siteTitle = title
     ? `${title} | Best AI Writing Tools 2026`
     : 'Best AI Writing Tools 2026 — Honest Reviews & Comparisons'
-  const metaDesc = description || 'Honest, in-depth reviews of the best AI writing tools. Compare Writesonic, Jasper, Copy.ai, and NeuronWriter to find the right tool for your workflow.'
+  const metaDesc = description || 'Honest, in-depth reviews of the best AI writing tools. Compare Writesonic, Rytr, Frase, and NeuronWriter to find the right tool for your workflow.'
 
   return (
     <>
@@ -22,8 +22,8 @@ export default function Layout({ children, title, description }) {
             </Link>
             <div className="flex gap-6 text-sm text-gray-600">
               <Link href="/reviews/writesonic" className="hover:text-gray-900">Writesonic</Link>
-              <Link href="/reviews/copy-ai" className="hover:text-gray-900">Copy.ai</Link>
-              <Link href="/reviews/jasper" className="hover:text-gray-900">Jasper</Link>
+              <Link href="/reviews/rytr" className="hover:text-gray-900">Rytr</Link>
+              <Link href="/reviews/frase" className="hover:text-gray-900">Frase</Link>
               <Link href="/reviews/neuronwriter" className="hover:text-gray-900">NeuronWriter</Link>
             </div>
           </div>

@@ -1,4 +1,4 @@
-# Subreddit: r/webdev
+﻿# Subreddit: r/webdev
 # Flair: Discussion
 # Title: 10 Claude prompts I use so often they're basically muscle memory at this point
 
@@ -64,4 +64,4 @@ The pattern with all of these: be specific about what you don't want as much as 
 
 ---
 
-*I collected a bigger version of this list (50+ prompts organized by task type — debugging, refactoring, documentation, code review, deployment) into a pack if you want more: Developer Productivity Pack ($19) — GUMROAD_URL_3*
+*I collected a bigger version of this list (50+ prompts organized by task type — debugging, refactoring, documentation, code review, deployment) into a pack if you want more: Developer Productivity Pack ($19) — https://claudemint.gumroad.com/l/cmvhj*

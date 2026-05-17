@@ -1,4 +1,4 @@
-# Subreddit: r/ClaudeAI
+﻿# Subreddit: r/ClaudeAI
 # Flair: Tips & Tricks
 # Title: 3 Claude Code workflows that changed how I work — CLAUDE.md, slash commands, and multi-agent planning
 
@@ -78,4 +78,4 @@ These three things together — project-level context via CLAUDE.md, project-spe
 
 ---
 
-*These workflows (and about 35 more) are in the Claude Code Power User Kit I put together — covers the full range from beginner prompts to agentic workflows: GUMROAD_URL_1 if you're interested.*
+*These workflows (and about 35 more) are in the Claude Code Power User Kit I put together — covers the full range from beginner prompts to agentic workflows: https://claudemint.gumroad.com/l/szzhld if you're interested.*

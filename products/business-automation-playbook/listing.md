@@ -7,50 +7,50 @@ AI Business Automation Playbook — 40 Prompts to Run Your Business with Claude
 $47
 
 ## Summary
-Stop paying for headcount you can't afford. This playbook gives solopreneurs and small teams 40 battle-tested Claude prompts to handle marketing, sales, operations, hiring, finance, and strategy — the full business stack, on demand.
+A downloadable Markdown file containing 40 structured Claude prompts for small business and solopreneur operations, organized into 7 sections: marketing, sales, customer service, operations, strategy, finance, and hiring.
 
 ## Description
-You're running a business with a team of one (or close to it). That means you're writing copy, handling customer service, building processes, hiring, managing finances, and setting strategy — all in the same week.
+**AI Business Automation Playbook** is a reference file with 40 Claude prompts covering common business tasks for small teams and independent operators. Each prompt has a reference ID, a description of what it produces, and [BRACKETED] placeholders for your business-specific details.
 
-This playbook doesn't give you generic AI tips. It gives you 40 specific, ready-to-run prompts that replace hours of manual business work. Copy, fill in the brackets, and get a professional output in minutes — not hours.
+---
 
-**What's inside — all 7 sections:**
+### Contents by Section
 
 **Section 1: Content & Marketing (8 prompts)**
-Build your content calendar, write blog posts, craft email newsletters, batch social media posts, produce ad copy, script YouTube videos, write product descriptions, and launch announcements — all without hiring a marketing team.
+Prompts for: generating a monthly content calendar, drafting blog posts with a defined outline structure, writing email newsletters, batching social media posts across formats, writing ad copy variations, scripting video content, writing product descriptions, and drafting launch announcement emails.
 
 **Section 2: Sales (6 prompts)**
-Write full sales pages, build follow-up email sequences, handle objections, run discovery calls, script upsells, and win back lost customers. Covers the entire sales pipeline.
+Prompts for: writing sales page copy with standard conversion sections, building follow-up email sequences, drafting objection-handling responses, structuring discovery call scripts, writing upsell offer descriptions, and drafting win-back emails for lapsed customers.
 
 **Section 3: Customer Service (4 prompts)**
-Generate your FAQ page, build 10 support response templates, handle refund requests with the right language, and save customers who are about to cancel.
+Prompts for: generating FAQ pages from a product or service description, creating support response templates for common issue types, handling refund request messages, and drafting cancellation response emails.
 
 **Section 4: Operations (6 prompts)**
-Write SOPs, job descriptions, meeting agendas, vendor evaluation rubrics, project status reports, and full process documentation. The operational backbone most solo businesses never build.
+Prompts for: writing Standard Operating Procedures for recurring tasks, drafting job descriptions, building meeting agendas with time allocations, creating vendor evaluation criteria, writing project status reports, and documenting business processes.
 
 **Section 5: Strategy & Planning (5 prompts)**
-Write any section of a business plan, run a competitor analysis, set quarterly OKRs, conduct a SWOT analysis, and build your pricing strategy — with real recommendations, not generic frameworks.
+Prompts for: drafting sections of a business plan, running a structured competitor analysis, setting quarterly OKRs with measurable key results, conducting a SWOT analysis, and building a pricing strategy document.
 
 **Section 6: Finance & Legal (4 prompts)**
-Generate professional invoice templates, decode contract clauses in plain English, build a categorized budget, and write financial summaries non-accountants can actually understand.
+Prompts for: generating invoice templates with line item descriptions, explaining contract clauses in plain language, building an expense budget by category, and writing financial summary reports.
 
 **Section 7: Hiring & Team (4 prompts)**
-Write job descriptions that attract high performers, generate interview questions with scoring rubrics, produce performance reviews, create onboarding checklists, and deliver difficult feedback the right way.
+Prompts for: writing job descriptions with clear requirements and responsibilities, generating interview questions with evaluation criteria, writing performance review summaries, and creating employee onboarding checklists.
 
-**This is for you if:**
-- You're a solopreneur or small team doing the work of 5 people
-- You use Claude (or want to) but spend too long writing prompts from scratch
-- You want professional outputs — not AI fluff — for real business functions
-- You're ready to stop being the bottleneck in your own business
+---
 
-**This is not for you if:**
-- You're looking for a one-time content pack (this is an evergreen ops toolkit)
-- You want theory — every prompt here is built to produce a usable output immediately
+### Format
 
-**One-time purchase. Use it forever.**
-No subscription. No upsell required. Buy once, run any prompt any time your business needs it.
+- Single `.md` file download
+- Each prompt has a reference ID (MKT-01, OPS-03, etc.) for quick lookup
+- Variable inputs marked with [BRACKETS]
+- One-time purchase — no subscription
 
-→ Get the AI Business Automation Playbook and stop doing everything manually.
+### Who This Is For
+
+- Solopreneurs and small business owners who use Claude for business tasks and want pre-structured prompts for recurring functions
+- Small teams that need consistent output for content, operations, and customer communications
+- Business operators who want a prompt reference library organized by business function rather than general-purpose AI instructions
 
 ## Tags
 business, automation, solopreneur, marketing, sales, ai-prompts, operations, strategy

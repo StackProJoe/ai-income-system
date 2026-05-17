@@ -1,4 +1,4 @@
-import Layout from '../../components/Layout'
+﻿import Layout from '../../components/Layout'
 import AffiliateButton from '../../components/AffiliateButton'
 
 export default function NeuronWriterReview() {
@@ -26,7 +26,7 @@ export default function NeuronWriterReview() {
             <div><span className="text-gray-500">Best for:</span> <strong>SEO-focused content writers</strong></div>
             <div><span className="text-gray-500">Verdict:</span> <strong className="text-green-600">Recommended for SEO</strong></div>
           </div>
-          <AffiliateButton href="NEURONWRITER_AFFILIATE_URL" size="md">
+          <AffiliateButton href="https://app.neuronwriter.com/ar/5657f5a1766f24898fcc6628850a1966" size="md">
             Try NeuronWriter Free &rarr;
           </AffiliateButton>
         </div>
@@ -117,7 +117,7 @@ export default function NeuronWriterReview() {
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-5">
           <p className="font-semibold mb-2">Ready to try NeuronWriter?</p>
           <p className="text-sm text-gray-600 mb-4">Run two free queries with no account required — enough to see the SERP analysis and content scoring in action.</p>
-          <AffiliateButton href="NEURONWRITER_AFFILIATE_URL" size="lg">
+          <AffiliateButton href="https://app.neuronwriter.com/ar/5657f5a1766f24898fcc6628850a1966" size="lg">
             Start Free Trial &rarr;
           </AffiliateButton>
         </div>

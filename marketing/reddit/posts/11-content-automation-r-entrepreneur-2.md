@@ -1,4 +1,4 @@
-# Subreddit: r/Entrepreneur
+﻿# Subreddit: r/Entrepreneur
 # Flair: Tips / Tricks
 # Title: How I run a full month of content in 3 hours using Claude — the exact workflow, not the theory
 
@@ -111,4 +111,4 @@ The AI isn't writing the content — I'm still writing it. The AI is doing the p
 
 ---
 
-*I documented this workflow (plus templates, the email newsletter process, and the analytics review workflow) in the AI Business Automation Playbook — GUMROAD_URL_4 ($47) if you want everything in one place.*
+*I documented this workflow (plus templates, the email newsletter process, and the analytics review workflow) in the AI Business Automation Playbook — https://claudemint.gumroad.com/l/mhogs ($47) if you want everything in one place.*

@@ -1,4 +1,4 @@
-# Subreddit: r/Entrepreneur
+﻿# Subreddit: r/Entrepreneur
 # Flair: Tips / Tricks
 # Title: 4 Claude prompts I use to run my business — not for content, for actual operations
 
@@ -94,4 +94,4 @@ These aren't flashy but they've genuinely freed up 8-10 hours a month for me. Op
 
 ---
 
-*I documented a bigger library of these (including customer success workflows, hiring prompts, and a weekly review template) in the AI Business Automation Playbook ($47) — GUMROAD_URL_4 if you want the full set.*
+*I documented a bigger library of these (including customer success workflows, hiring prompts, and a weekly review template) in the AI Business Automation Playbook ($47) — https://claudemint.gumroad.com/l/mhogs if you want the full set.*

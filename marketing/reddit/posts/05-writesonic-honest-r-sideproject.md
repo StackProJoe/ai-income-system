@@ -1,10 +1,10 @@
-# Subreddit: r/SideProject
+﻿# Subreddit: r/SideProject
 # Flair: Show and Tell
 # Title: Built an AI writing tool review site after being burned by bad recommendations — here's what I actually found
 
 **Background:** I spent about $300 on AI writing tool subscriptions last year based on reviews that turned out to be pure affiliate fluff. So I built a site where I actually test these tools on the same tasks and write honest comparisons.
 
-The site: AFFILIATE_SITE_URL
+The site: https://ai-tools-reviewed.vercel.app
 
 ---
 

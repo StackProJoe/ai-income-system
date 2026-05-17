@@ -7,31 +7,50 @@ Developer Productivity Pack — 30 Daily-Use Claude Prompts for Devs
 $19
 
 ## Summary
-30 copy-paste prompts for the development tasks you do every single day — no fluff, no filler, just the ones that actually save you time. Built for developers who already use Claude and want to stop rewriting the same prompts from scratch.
+A downloadable Markdown file with 30 structured Claude prompts covering 7 common development categories: quick utility tasks, algorithms, testing, technical writing, performance, security, and DevOps.
 
 ## Description
-**Stop rewriting the same prompts over and over.**
+**Developer Productivity Pack** is a reference file containing 30 Claude prompts for development tasks that come up regularly during software projects. Each prompt includes a reference ID, a description of what it produces, and [BRACKETED] placeholders for your specific code, language, or context.
 
-This pack contains 30 battle-tested Claude prompts for the development tasks that show up in every sprint, every week, every day. Each one is production-ready — fill in the brackets, paste your code, get useful output immediately.
+---
 
-**What's inside — 7 categories, 30 prompts:**
+### Contents — 7 Categories, 30 Prompts
 
-- **Quick Wins (10 prompts)** — Explain code, name variables, write regex, generate SQL queries, find git commands, write bash one-liners, create Makefiles, set up Docker, scaffold CI/CD pipelines, and generate `.env.example` files
-- **Algorithms & Data (3 prompts)** — Explain any algorithm deeply, choose the right data structure, and walk through interview problems step by step
-- **Testing (3 prompts)** — Generate complete test suites, build realistic mocks, and diagnose flaky tests
-- **Writing & Communication (3 prompts)** — Rewrite Slack messages that get ignored, draft technical blog posts, and write Stack Overflow-quality answers
-- **Performance (3 prompts)** — Optimize slow database queries, reduce bundle size, and hunt down memory leaks
-- **Security (4 prompts)** — Write input validation, audit dependencies, find hardcoded secrets, and review auth logic
-- **DevOps (4 prompts)** — Generate nginx configs, set up cron jobs, parse logs, and write health check scripts
+**Quick Wins (10 prompts)**
+Prompts for: explaining code blocks, suggesting variable and function names, writing regular expressions, generating SQL queries, finding git commands, writing shell one-liners, creating Makefiles, generating Dockerfiles, scaffolding CI/CD pipeline configs, and generating `.env.example` files from existing code.
 
-**Who this is for:**
-- Developers who use Claude regularly but keep writing prompts from scratch
-- Engineers who want structured, reliable output instead of vague AI responses
-- Anyone who's tired of generic prompts that require 3 follow-ups to get something usable
+**Algorithms & Data Structures (3 prompts)**
+Prompts for: explaining how an algorithm works with complexity analysis, choosing between data structure options for a specific use case, and walking through a problem with structured hints.
 
-Every prompt includes customization brackets `[LIKE THIS]` — fill in your context and go. No setup, no learning curve, useful on day one.
+**Testing (3 prompts)**
+Prompts for: generating test suites with edge cases, building mock objects and fixtures, and diagnosing intermittently failing tests.
 
-**Get the pack. Save the 20 minutes you'd spend prompting in circles.**
+**Technical Writing & Communication (3 prompts)**
+Prompts for: rewriting unclear messages for technical context, drafting technical blog posts with a defined structure, and writing answers to technical questions in a clear, reproducible format.
+
+**Performance (3 prompts)**
+Prompts for: analyzing slow database queries with index suggestions, identifying JavaScript/CSS bundle size issues, and tracing memory allocation problems.
+
+**Security (4 prompts)**
+Prompts for: writing input validation for a given schema, auditing dependencies for known vulnerabilities, scanning code for hardcoded secrets and credentials, and reviewing authentication/authorization logic.
+
+**DevOps & Infrastructure (4 prompts)**
+Prompts for: generating nginx or Apache configuration files, setting up cron job schedules, parsing structured log output, and writing service health check scripts.
+
+---
+
+### Format
+
+- Single `.md` file download
+- Each prompt has a short reference ID for quick scanning
+- Variable inputs marked with [BRACKETS]
+- Compatible with Claude.ai, Claude Code, and Claude API
+
+### Who This Is For
+
+- Developers who use Claude regularly for coding tasks and want pre-structured prompts for common scenarios
+- Engineers who want consistent prompt structure for repeated task types (testing, security reviews, documentation)
+- Anyone who uses Claude for development work and wants a quick-reference library rather than writing prompts from scratch
 
 ## Tags
 developer, coding, claude, ai-prompts, productivity, testing, sql, git

@@ -12,25 +12,25 @@ const TOOLS = [
     affiliateUrl: 'WRITESONIC_AFFILIATE_URL',
   },
   {
-    name: 'Copy.ai',
-    score: 8.8,
-    price: '$49/mo',
-    bestFor: 'Marketing copy & GTM teams',
-    affiliateUrl: 'COPYAI_AFFILIATE_URL',
+    name: 'Rytr',
+    score: 8.4,
+    price: 'Free — $29/mo',
+    bestFor: 'Budget-friendly short-form copy',
+    affiliateUrl: 'https://rytr.me/?via=joel-gomez',
   },
   {
-    name: 'Jasper',
-    score: 8.5,
-    price: '$49/mo',
-    bestFor: 'Brand-consistent content at scale',
-    affiliateUrl: 'JASPER_AFFILIATE_URL',
+    name: 'Frase',
+    score: 8.2,
+    price: 'From $15/mo',
+    bestFor: 'SEO content briefs & research',
+    affiliateUrl: 'FRASE_AFFILIATE_URL',
   },
   {
     name: 'NeuronWriter',
     score: 8.3,
     price: '$23/mo',
     bestFor: 'SEO-optimized blog content',
-    affiliateUrl: 'NEURONWRITER_AFFILIATE_URL',
+    affiliateUrl: 'https://app.neuronwriter.com/ar/5657f5a1766f24898fcc6628850a1966',
   },
 ]
 
@@ -48,7 +48,7 @@ export default function Home() {
 
       <div className="bg-blue-50 border border-blue-200 rounded-lg p-6 mb-8">
         <p className="text-sm text-blue-800">
-          <strong>Quick Verdict:</strong> For most users, <strong>Writesonic</strong> offers the best value at $16/mo with the strongest long-form output. If you need a full GTM platform, <strong>Copy.ai</strong> is the enterprise choice.
+          <strong>Quick Verdict:</strong> For most users, <strong>Writesonic</strong> offers the best value at $16/mo with strong long-form output and built-in SEO tools. On a tight budget, <strong>Rytr&apos;s free plan</strong> covers short-form content with no credit card required.
         </p>
       </div>
 
@@ -58,10 +58,10 @@ export default function Home() {
 
       <div className="grid gap-6">
         {[
-          { name: 'Writesonic', href: '/reviews/writesonic', desc: 'Best overall value. Strong long-form output, built-in SEO tools, and the lowest price on this list.', score: 9.1 },
-          { name: 'Copy.ai', href: '/reviews/copy-ai', desc: 'The GTM platform choice. Best for marketing teams that need workflows, not just a writing assistant.', score: 8.8 },
-          { name: 'Jasper', href: '/reviews/jasper', desc: 'Best for brand voice. The only tool with serious brand training features for consistent output at scale.', score: 8.5 },
+          { name: 'Writesonic', href: '/reviews/writesonic', desc: 'Best overall value. Strong long-form output, built-in SEO tools, and the most competitive price on this list.', score: 9.1 },
+          { name: 'Rytr', href: '/reviews/rytr', desc: 'Best budget pick. Free plan available, strong short-form copy, and the cheapest paid plan at $9/mo.', score: 8.4 },
           { name: 'NeuronWriter', href: '/reviews/neuronwriter', desc: 'Best for SEO. Built around SERP analysis — if you write for search traffic, this is the tool.', score: 8.3 },
+          { name: 'Frase', href: '/reviews/frase', desc: 'Best for content briefs. SERP research built into the writing workflow for content that ranks.', score: 8.2 },
         ].map(tool => (
           <Link key={tool.name} href={tool.href} className="block border border-gray-200 rounded-lg p-5 hover:border-blue-300 transition-colors">
             <div className="flex items-start justify-between">
@@ -78,8 +78,8 @@ export default function Home() {
       <div className="mt-12 border-t pt-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-4">Comparisons</h2>
         <div className="flex gap-4 flex-wrap">
-          <Link href="/vs/writesonic-vs-jasper" className="text-blue-600 hover:underline">Writesonic vs Jasper</Link>
-          <Link href="/vs/copy-ai-vs-jasper" className="text-blue-600 hover:underline">Copy.ai vs Jasper</Link>
+          <Link href="/vs/writesonic-vs-rytr" className="text-blue-600 hover:underline">Writesonic vs Rytr</Link>
+          <Link href="/vs/rytr-vs-frase" className="text-blue-600 hover:underline">Rytr vs Frase</Link>
         </div>
       </div>
     </Layout>

@@ -1,4 +1,4 @@
-# Subreddit: r/artificial
+﻿# Subreddit: r/artificial
 # Flair: Discussion
 # Title: 3 months testing AI writing tools seriously — honest observations on Writesonic vs Jasper vs Copy.ai
 
@@ -55,4 +55,4 @@ If you already know how to prompt well, you might find these tools constraining 
 
 ---
 
-*I write more detailed breakdowns like this on my AI tools site if that's useful: AFFILIATE_SITE_URL — currently have deep reviews of Writesonic, Jasper, and NeuronWriter.*
+*I write more detailed breakdowns like this on my AI tools site if that's useful: https://ai-tools-reviewed.vercel.app — currently have deep reviews of Writesonic, Jasper, and NeuronWriter.*

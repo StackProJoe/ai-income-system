@@ -8,13 +8,21 @@ Last Friday of each month
 
 ## Steps
 
-1. Ask the user (output this message):
-   "Monthly performance check — please paste:
-   1. Gumroad dashboard: sales and revenue by product this month
-   2. Affiliate dashboard totals: clicks and commissions per program
-   If unavailable, type 'skip' to defer until next session."
+1. Pull Gumroad sales data automatically using the CLI:
+   ```bash
+   export GUMROAD_ACCESS_TOKEN=XLKM2m6W8eH32yyhYaXswnWiidERFfzudifoMlDNlQY
+   gumroad sales list --all --json --jq '[.sales[] | {product: .product_name, amount: .price, date: .created_at}]'
+   gumroad payouts upcoming
+   ```
+   Filter results to the current calendar month. If the CLI is not installed, run:
+   ```bash
+   curl -fsSL https://gumroad.com/install-cli.sh | bash && source ~/.profile
+   ```
 
-2. If user provides data, update `tracking/log.md` with a new section:
+2. For affiliate data (Writesonic, Rytr, NeuronWriter, Frase): these require manual dashboard login — output this message to the user:
+   "Affiliate check — please paste your commission totals for this month from each affiliate dashboard. If unavailable, type 'skip'."
+
+3. Update `tracking/log.md` with a new section:
    ```markdown
    ## Month: [YEAR-MONTH]
 
@@ -31,9 +39,9 @@ Last Friday of each month
    | Program | Clicks | Commissions |
    |---------|--------|-------------|
    | Writesonic | X | $X |
-   | Copy.ai | X | $X |
+   | Rytr | X | $X |
    | NeuronWriter | X | $X |
-   | Jasper | X | $X |
+   | Frase | X | $X |
    | **Total** | | **$X** |
 
    ### Total This Month: $X

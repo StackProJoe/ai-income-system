@@ -1,4 +1,4 @@
-# Subreddit: r/ChatGPT
+﻿# Subreddit: r/ChatGPT
 # Flair: Discussion
 # Title: Claude vs ChatGPT for development work — honest comparison after using both seriously for 6 months
 
@@ -49,4 +49,4 @@ But I use both, and "which AI is better" is the wrong question. The right questi
 
 ---
 
-*I've been documenting more of these comparisons with specific test tasks on my AI tools site: AFFILIATE_SITE_URL — covers writing tools, coding tools, and some niche ones worth knowing about.*
+*I've been documenting more of these comparisons with specific test tasks on my AI tools site: https://ai-tools-reviewed.vercel.app — covers writing tools, coding tools, and some niche ones worth knowing about.*

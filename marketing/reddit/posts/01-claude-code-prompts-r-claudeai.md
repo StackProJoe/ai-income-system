@@ -1,4 +1,4 @@
-# Subreddit: r/ClaudeAI
+﻿# Subreddit: r/ClaudeAI
 # Flair: Tips & Tricks
 # Title: 5 Claude Code prompts I actually use every day as a dev (copy-paste ready)
 
@@ -78,4 +78,4 @@ I've been going deeper on Claude Code-specific workflows lately (CLAUDE.md files
 
 ---
 
-*If you want a bigger collection of these, I picked up the Claude Code Power User Kit a few weeks ago — it's a doc of ~40 prompts organized by workflow type. Worth it if you're using Claude Code seriously: GUMROAD_URL_1*
+*If you want a bigger collection of these, I picked up the Claude Code Power User Kit a few weeks ago — it's a doc of ~40 prompts organized by workflow type. Worth it if you're using Claude Code seriously: https://claudemint.gumroad.com/l/szzhld*

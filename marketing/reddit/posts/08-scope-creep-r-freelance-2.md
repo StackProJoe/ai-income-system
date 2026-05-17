@@ -1,4 +1,4 @@
-# Subreddit: r/freelance
+﻿# Subreddit: r/freelance
 # Flair: Discussion
 # Title: The prompt that saved a $4,200 project from scope creep (and how I use it now every time)
 
@@ -45,4 +45,4 @@ I use some version of this prompt every time scope creep happens now. It takes a
 
 ---
 
-*If you want a full set of these kinds of prompts — scope creep, late invoices, difficult clients, raising rates, ending engagements professionally — I put them all in the Freelancer's AI Command Center: GUMROAD_URL_2 ($39). The scope creep one alone has paid for it several times over for me.*
+*If you want a full set of these kinds of prompts — scope creep, late invoices, difficult clients, raising rates, ending engagements professionally — I put them all in the Freelancer's AI Command Center: https://claudemint.gumroad.com/l/isexmy ($39). The scope creep one alone has paid for it several times over for me.*

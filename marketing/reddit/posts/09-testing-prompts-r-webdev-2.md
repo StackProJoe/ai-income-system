@@ -1,4 +1,4 @@
-# Subreddit: r/webdev
+﻿# Subreddit: r/webdev
 # Flair: Discussion
 # Title: Claude prompts for testing specifically — the ones that actually help (test generation, mocks, flaky test debugging)
 
@@ -106,4 +106,4 @@ Testing is genuinely one of the best use cases for Claude because the output is 
 
 ---
 
-*I have a bigger collection of these (including integration test prompts, TDD workflow prompts, and a test audit checklist) in the Developer Productivity Pack ($19) — GUMROAD_URL_3 if you want the full set.*
+*I have a bigger collection of these (including integration test prompts, TDD workflow prompts, and a test audit checklist) in the Developer Productivity Pack ($19) — https://claudemint.gumroad.com/l/cmvhj if you want the full set.*
