@@ -64,7 +64,7 @@ export default function RytrVsFrase() {
           <div className="border rounded-lg p-4">
             <p className="font-semibold mb-1">Frase</p>
             <p className="text-sm text-gray-600 mb-3">$1 for 5-day trial</p>
-            <AffiliateButton href="FRASE_AFFILIATE_URL" size="sm" variant="secondary">Try Frase →</AffiliateButton>
+            <AffiliateButton href="https://www.frase.io/?utm_source=firstpromoter&utm_medium=affiliate&utm_campaign=affiliate_program&via=joel88" size="sm" variant="secondary">Try Frase →</AffiliateButton>
           </div>
         </div>
       </div>

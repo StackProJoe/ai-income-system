@@ -23,7 +23,7 @@ const TOOLS = [
     score: 8.2,
     price: 'From $15/mo',
     bestFor: 'SEO content briefs & research',
-    affiliateUrl: 'FRASE_AFFILIATE_URL',
+    affiliateUrl: 'https://www.frase.io/?utm_source=firstpromoter&utm_medium=affiliate&utm_campaign=affiliate_program&via=joel88',
   },
   {
     name: 'NeuronWriter',

@@ -26,7 +26,7 @@ export default function FraseReview() {
             <div><span className="text-gray-500">Best for:</span> <strong>SEO writers &amp; content strategists</strong></div>
             <div><span className="text-gray-500">Verdict:</span> <strong className="text-green-600">Recommended for SEO teams</strong></div>
           </div>
-          <AffiliateButton href="FRASE_AFFILIATE_URL" size="md">
+          <AffiliateButton href="https://www.frase.io/?utm_source=firstpromoter&utm_medium=affiliate&utm_campaign=affiliate_program&via=joel88" size="md">
             Try Frase &rarr;
           </AffiliateButton>
         </div>
@@ -117,7 +117,7 @@ export default function FraseReview() {
         <div className="bg-blue-50 border border-blue-200 rounded-lg p-5">
           <p className="font-semibold mb-2">Try Frase</p>
           <p className="text-sm text-gray-600 mb-4">5-day trial for $1 — enough time to run a full content brief and see the SERP analysis in action.</p>
-          <AffiliateButton href="FRASE_AFFILIATE_URL" size="lg">
+          <AffiliateButton href="https://www.frase.io/?utm_source=firstpromoter&utm_medium=affiliate&utm_campaign=affiliate_program&via=joel88" size="lg">
             Start $1 Trial &rarr;
           </AffiliateButton>
         </div>
